@@ -10,7 +10,7 @@ public class MenuUtils {
             //menu.append(String.format("%c%d - %s\n", (i < 10 ? '0' : '\0'), i + 1, arr_opcoes[i].trim()));
             menu.append(String.format("%s%d%s - %s\n",ConsoleColors.CYAN_BOLD, i + 1,ConsoleColors.RESET, arr_opcoes[i].trim()));
         }
-        menu.append(ConsoleColors.CYAN_BOLD+"0"+ConsoleColors.RESET+" - Sair\n>>> ");
+        menu.append(ConsoleColors.CYAN_BOLD+"0"+ConsoleColors.RESET+" - Sair\n");//>>> ");
         return menu.toString();
     }
     public static int obterOpcao(String menu) {
