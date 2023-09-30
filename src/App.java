@@ -18,17 +18,27 @@ public class App {
     public static final int EXCLUSAO = 6;
     public static final int TOTAL = 7;
     public static void main(String[] args) {
+
         Scanner input = new Scanner(System.in);
+
         String nome_banco = "";
+
         while(nome_banco.isEmpty() || nome_banco.isBlank()){
+
             System.out.print("Digite o nome do seu banco: ");
             nome_banco = input.nextLine().trim();
+
         }limparConsole();
+
         Banco banco = new Banco(nome_banco);
+
         String menu_principal = gerarMenu(nome_banco,"Cadastrar, Consultar, Sacar, Depositar, Transferir, Excluir, Totalizações");
+
         String menu_basico = gerarMenu(nome_banco, "Cadastrar");
         boolean ha_contas = false;
+
         int opcao;
+
         do{
             if(!ha_contas) {
                 opcao = MenuUtils.obterOpcao(menu_basico);
